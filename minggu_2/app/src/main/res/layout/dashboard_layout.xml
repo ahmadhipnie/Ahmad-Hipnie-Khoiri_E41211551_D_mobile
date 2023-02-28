@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:backgroundTint="#FF0707">
+
+            <ImageButton
+                android:id="@+id/ibLinear"
+                android:onClick="ibLinear"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/rounded"
+                android:backgroundTint="#2196F3"
+                android:contentDescription="gambar mobil"
+                android:src="@drawable/mobil_"
+                android:text="linear layout4"
+
+                />
+
+            <ImageButton
+                android:id="@+id/ibRelative"
+                android:onClick="ibRelative"
+                android:layout_width="139dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded"
+
+                 android:contentDescription="gambar shopping cart"
+                android:src="@drawable/cart_foreground"
+                android:text="Relative Layout"
+                android:textAlignment="textEnd" />
+
+            <ImageButton
+                android:id="@+id/ibConstraint"
+                android:onClick="ibConstraint"
+                android:layout_width="128dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded"
+                android:backgroundTint="#318880"
+                android:clickable="true"
+                android:contentDescription="tenis"
+                android:src="@drawable/tenis_foreground"
+                android:text="constraint layout" />
+        </LinearLayout>
+
+    </TableRow>
+    <TableRow
+        android:layout_marginTop="20dp"
+        android:paddingTop="0dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="130dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFrame"
+                android:onClick="cvFrame"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="100dp"
+                app:cardBackgroundColor="#FF0707"
+
+
+            >
+
+                <ImageView
+                    android:id="@+id/ivFrame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/cacat_foreground"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/tvFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_gravity="bottom|center"
+                    android:text="random"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="21sp"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvTable"
+                android:onClick="cvTable"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="100dp"
+                app:cardBackgroundColor="#FF0707"
+
+
+                >
+
+                <ImageView
+                    android:id="@+id/ivTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/kabadi_foreground"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/tvTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_gravity="bottom|center"
+                    android:text="random"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="21sp"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvMaterial"
+                android:onClick="cvMaterial"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="100dp"
+                app:cardBackgroundColor="#FF5722"
+
+
+                >
+
+                <ImageView
+                    android:id="@+id/ivMaterial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/sop_foreground"
+                    android:layout_gravity="center"
+                    />
+
+                <TextView
+                    android:id="@+id/tvMaterial"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_gravity="bottom|center"
+                    android:text="random"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="21sp"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+    </TableRow>
+    <TableRow
+        android:layout_marginTop="20dp"
+        android:paddingTop="0dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="130dp">
+
+            <Button
+                android:id="@+id/btVerticalsv"
+                android:onClick="btVerticalsv"
+                android:layout_width="136dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded"
+                android:text="Scroll View Vertical" />
+
+            <Button
+                android:id="@+id/btHorizontalsv"
+                android:onClick="btHorizontalsv"
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded"
+                android:text="Scroll View Horizontal" />
+
+            <Button
+                android:id="@+id/btNepgenep"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Button Nepgenep"
+                android:background="@drawable/rounded"/>
+        </LinearLayout>
+
+    </TableRow>
+
+</TableLayout>

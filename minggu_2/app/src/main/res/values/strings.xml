@@ -1,0 +1,5 @@
+<resources>
+    <string name="login">LOGIN</string>
+    <string name="menu_navbar">Navbar</string>
+    <string name="menu_notification">Notification</string>
+</resources>
