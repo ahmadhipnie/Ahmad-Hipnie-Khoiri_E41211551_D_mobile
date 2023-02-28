@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">minggu_3</string>
+    <string-array name="countrires_arr">
+        <item>Indonesia</item>
+        <item>Malaysia</item>
+        <item>Thailand</item>
+        <item>Philippines</item>
+        <item>Brunei</item>
+        <item>Laos</item>
+        <item>Myanmar</item>
+        <item>Cambodia</item>
+    </string-array>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <string name="action_settings">Settings</string>
+</resources>
