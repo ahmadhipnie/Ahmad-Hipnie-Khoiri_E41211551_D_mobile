@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">minggu_4_acara18</string>
+    <string name="firstFragment">firstFragment</string>
+    <string name="secondFragment">secondFragment</string>
+    <string name="hello_second_fragment"></string>
+    <string name="hello_first_fragment"></string>
+</resources>
