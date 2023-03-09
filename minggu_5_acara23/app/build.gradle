@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.tosepatu'
+    namespace 'com.example.minggu_5_acara23'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.tosepatu"
+        applicationId "com.example.minggu_5_acara23"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -21,10 +21,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-    }
-    buildFeatures{
-        dataBinding true
-
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -40,9 +36,4 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-    implementation 'androidx.lifecycle:lifecycle-livedata-core:2.5.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.5.1'
-    implementation 'androidx.navigation:navigation-ui:2.5.3'
-    implementation 'androidx.navigation:navigation-fragment:2.5.3'
-    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
 }

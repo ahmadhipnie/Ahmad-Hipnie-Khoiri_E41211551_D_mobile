@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        // TODO Auto-generated method stub
         Toast.makeText(this, adapter.getItem(position), Toast.LENGTH_SHORT).show();
     }
 }
