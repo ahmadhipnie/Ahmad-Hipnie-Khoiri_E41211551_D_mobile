@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">ToSepatu</string>
+    <string name="nama_akun">Daffa Fauzi Rahman</string>
+    <string name="nomor_akun">082228455809</string>
     <string-array name="cabang">
         <item>Jember</item>
         <item>Pamekasan</item>
