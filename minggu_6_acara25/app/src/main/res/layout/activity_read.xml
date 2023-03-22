@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ReadActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Read Data From SD card"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/etNamaFile"
+        android:layout_width="379dp"
+        android:layout_height="57dp"
+        android:hint="nama file(example.txt)" />
+
+    <Button
+        android:id="@+id/btnBacaData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="buka file"
+        android:layout_gravity="center"
+        android:onClick="bacaData"/>
+
+    <EditText
+        android:id="@+id/etIsiFile"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:hint="@string/add_text" />
+
+
+
+
+</LinearLayout>
