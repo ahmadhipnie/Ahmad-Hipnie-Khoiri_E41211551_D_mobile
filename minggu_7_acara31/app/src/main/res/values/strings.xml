@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">minggu_7_acara31</string>
+    <string name="pref_login_user_username" />
+    <string name="pref_login_user_password" />
+    <string name="pref_register_user_username" />
+    <string name="pref_register_user_password" />
+</resources>
