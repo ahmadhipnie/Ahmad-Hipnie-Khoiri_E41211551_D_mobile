@@ -34,15 +34,29 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="buat file"
+        android:text="buat file private"
         android:layout_gravity="center"
         android:onClick="buatFile"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Baca Data"
+        android:text="buat file Ppblic"
+        android:layout_gravity="center"
+        android:onClick="buatFilePublic"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Baca Data Private"
         android:layout_gravity="center"
         android:onClick="bacaData"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Baca Data Public"
+        android:layout_gravity="center"
+        android:onClick="bacaDataPublic"/>
 
 </LinearLayout>

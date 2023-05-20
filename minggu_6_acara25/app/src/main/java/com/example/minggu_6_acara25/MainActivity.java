@@ -68,6 +68,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void buatFilePublic(View view) {
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, MY_REQUEST_CODE);
+        String info = etIsiFile.getText().toString();
+        File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);//folder name
+        File myFile = new File(folder, etNamaFile.getText().toString());//file name
+        writeData(myFile, info);
+        etIsiFile.setText("");
+    }
+
 
 
     public boolean isExternalStorageWriteable() {
@@ -83,12 +92,37 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void bacaDataPublic(View view) {
+        Intent intent = new Intent(this, ReadActivity2.class);
+        startActivity(intent);
+    }
+
     private String getFilePath(){
         ContextWrapper contextWrapper = new ContextWrapper(getApplicationContext());
         File directory = contextWrapper.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS);
         File file = new File(directory, etNamaFile.getText().toString());
         return file.getPath();
 
+    }
+
+    private void writeData(File myFile, String data) {
+        FileOutputStream fileOutputStream = null;
+        try {
+            System.out.println("");
+            fileOutputStream = new FileOutputStream(myFile);
+            fileOutputStream.write(data.getBytes());
+            Toast.makeText(this, "Done" + myFile.getAbsolutePath(), Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (fileOutputStream != null) {
+                try {
+                    fileOutputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
 

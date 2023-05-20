@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Read Data From SD card"
+        android:text="Read Data From private"
         android:textStyle="bold"
         android:layout_gravity="center"
         android:textAlignment="center"
@@ -36,6 +36,15 @@
         android:layout_width="match_parent"
         android:layout_height="62dp"
         android:hint="@string/add_text" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="59dp"
+        android:onClick="back"
+        android:text="Kembali" />
 
 
 

@@ -1,6 +1,7 @@
 package com.example.minggu_6_acara25;
 
 import android.content.ContextWrapper;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
@@ -76,4 +77,10 @@ public class ReadActivity extends AppCompatActivity {
         return file.getPath();
 
     }
+
+    public void back(View view) {
+        Intent intent = new Intent(ReadActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }

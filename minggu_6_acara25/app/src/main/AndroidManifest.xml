@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ReadActivity"/>
+        <activity android:name=".ReadActivity2"/>
     </application>
     <!-- perizinan untuk android 11n kebawah -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
