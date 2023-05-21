@@ -50,7 +50,7 @@
                     android:text="Your email address"
                     android:textColor="#2E417B"/>
                 <EditText
-                    android:id="@+id/et_emailSignIn"
+                    android:id="@+id/etSignupEmail"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="24dp"
@@ -72,6 +72,7 @@
                     android:text="choose your username"
                     android:textColor="#2E417B"/>
                 <EditText
+                    android:id="@+id/etSignupUsername"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="24dp"
@@ -94,6 +95,7 @@
                         android:text="choose your password"
                         android:textColor="#2E417B"/>
                     <EditText
+                        android:id="@+id/etSignupPassword"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:layout_marginTop="24dp"
@@ -106,14 +108,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp">
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Your email address"
+                        android:text="confirm password"
                         android:textColor="#2E417B"
                         android:fontFamily="@font/poppins"/>
                     <EditText
+                        android:id="@+id/etConfirmPassword"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
                         android:hint="konfirmasi ulang password"
@@ -122,8 +126,48 @@
                         />
 
                 </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="confirm password"
+                        android:textColor="#2E417B"
+                        android:fontFamily="@font/poppins"/>
+                    <EditText
+                        android:id="@+id/etNotelp"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="masukkan nomor telepon"
+                        android:layout_marginTop="24dp"
+                        android:background="@drawable/rounded_editext"
+                        />
+
+                </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="lokasi"
+                        android:textColor="#2E417B"
+                        android:fontFamily="@font/poppins"/>
+
+                <Spinner
+                    android:id="@+id/spCabang"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:autofillHints="pilih lokasi anda"
+                    android:background="@drawable/rounded_editext"
+                    android:entries="@array/cabang" />
 
                 <Button
+                    android:id="@+id/btnRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Register"
@@ -145,6 +189,7 @@
                         android:textSize="18sp"
                         android:fontFamily="@font/poppins_medium"/>
                     <TextView
+                        android:id="@+id/btnLogin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Masuk"

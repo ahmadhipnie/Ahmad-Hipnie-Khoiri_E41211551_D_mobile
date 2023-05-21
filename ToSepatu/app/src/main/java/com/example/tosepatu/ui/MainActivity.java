@@ -3,11 +3,13 @@ package com.example.tosepatu.ui;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.example.tosepatu.R;
+import com.example.tosepatu.session.sessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
 
 //    PesananFragment pesanan = new PesananFragment();
 
+    sessionManager sessionManager;
+
 
 
     @Override
@@ -35,6 +39,18 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         bottomNavigationView.setSelectedItemId(R.id.menuBeranda);
         bottomNavigationView.setOnItemSelectedListener(this);
 
+        sessionManager = new sessionManager(MainActivity.this);
+        if (!sessionManager.isloggedIn()){
+            moveToLogin();
+        }
+
+    }
+
+    private void moveToLogin() {
+        Intent intent = new Intent(MainActivity.this, loginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+        startActivity(intent);
+        finish();
     }
 
     @Override
