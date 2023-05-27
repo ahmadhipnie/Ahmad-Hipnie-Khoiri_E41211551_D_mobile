@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">tosepatu</string>
+    <string name="nama_akun">Daffa Fauzi Rahman</string>
+    <string name="nomor_akun">082228455809</string>
+    <string-array name="cabang">
+        <item>Jember</item>
+        <item>Pamekasan</item>
+        <item>Probolinggo</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

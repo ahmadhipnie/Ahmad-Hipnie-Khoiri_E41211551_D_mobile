@@ -37,7 +37,7 @@ public class sessionManager {
         editor.putString(USERNAME, user.getUsername());
         editor.putString(NO_TELP, user.getNoTelp());
         editor.putString(FOTO, user.getFoto());
-        editor.putString(WILAYAH_ID, user.getWilayahId());
+        editor.putString(WILAYAH_ID, user.getWilayahId().toString());
         editor.commit();
     }
     public HashMap<String,String> getUserDetail(){

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eeeeee">
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="feedtop">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:contentDescription="feed2"
+                android:layout_width="410dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:clickable="true"
+                android:src="@drawable/feedtop" />
+            <ImageView
+                android:contentDescription="feed3"
+                android:layout_width="410dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:clickable="true"
+                android:src="@drawable/feedtop" />
+            <ImageView
+                android:layout_width="410dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:contentDescription="feed1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/feedtop" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <androidx.core.widget.NestedScrollView
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <include layout="@layout/promo_beranda_layout" />
+            <include layout="@layout/jenislayanan_beranda_layout" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,7 @@ import com.example.tosepatu.R;
 import com.example.tosepatu.api.ApiClient;
 import com.example.tosepatu.api.ApiInterface;
 import com.example.tosepatu.model.login.Login;
+import com.example.tosepatu.model.login.LoginBody;
 import com.example.tosepatu.model.login.LoginData;
 import com.example.tosepatu.session.sessionManager;
 
@@ -85,8 +87,6 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
                 email = et_emailSignIn.getText().toString();
                 password = et_passwordSignIn.getText().toString();
                 login(email, password);
-
-
                 break;
 
             case R.id.btnSignUp:
@@ -101,27 +101,29 @@ public class loginActivity extends AppCompatActivity implements View.OnClickList
 
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
 
-        Call<Login> loginCall = apiInterface.loginResponse(this.email, this.password);
+        Call<Login> loginCall = apiInterface.loginResponse(new LoginBody(email, password));
         loginCall.enqueue(new Callback<Login>() {
             @Override
             public void onResponse(Call<Login> call, Response<Login> response) {
-                if (response.body() != null && response.isSuccessful() && response.body().getStatus()){
-                    sessionManager = new sessionManager(loginActivity.this);
-                    LoginData loginData = response.body().getData();
-                    sessionManager.createLoginSession(loginData);
-
-                    Toast.makeText(loginActivity.this,response.body().getData().getUsername(),Toast.LENGTH_LONG).show();
-                    Intent intent1 = new Intent(loginActivity.this, MainActivity.class);
-                    startActivity(intent1);
-
-                } else {
-                    Toast.makeText(loginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                    System.out.println(response.body().getMessage());
-                }
+                Log.d("Response", response.body().toString());
+//                if (response.body() != null && response.isSuccessful() && response.body().getStatus()){
+//                    sessionManager = new sessionManager(loginActivity.this);
+//                    LoginData loginData = response.body().getData();
+//                    sessionManager.createLoginSession(loginData);
+//
+//                    Toast.makeText(loginActivity.this,response.body().getData().getUsername(),Toast.LENGTH_LONG).show();
+//                    Intent intent1 = new Intent(loginActivity.this, MainActivity.class);
+//                    startActivity(intent1);
+//
+//                } else {
+//                    Toast.makeText(loginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+//                    System.out.println(response.body().getMessage());
+//                }
             }
 
             @Override
             public void onFailure(Call<Login> call, Throwable t) {
+                Log.d("Error", t.getLocalizedMessage());
                 Toast.makeText(loginActivity.this, t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
