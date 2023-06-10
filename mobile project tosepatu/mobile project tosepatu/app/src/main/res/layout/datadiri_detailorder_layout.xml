@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+ <TextView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:text="Layanan yang dipilih"
+     android:textColor="@color/black"
+     android:background="@drawable/bg_penambahan"
+     android:layout_margin="20dp"
+     android:textSize="20sp"
+     android:layout_weight="1"
+     android:textStyle="bold"
+     android:padding="20dp"
+     android:id="@+id/PilihLayanan"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Harga Layanan"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:padding="20dp"
+        android:background="@drawable/bg_penambahan"
+        android:layout_margin="20dp"
+        android:id="@+id/HargaLayananPilih"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:onClick="getAlamat"
+            android:id="@+id/etAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textfield"
+            android:hint="Alamat"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCatatan"
+            android:layout_width="match_parent"
+            android:layout_height="151dp"
+            android:background="@drawable/textfield"
+            android:hint="Masukkan catatan"
+            android:inputType="textPersonName"
+            android:onClick="getCatatan" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:text="Jumlah"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <NumberPicker
+            android:id="@+id/numberPicker"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_margin="0dp"
+            android:background="@drawable/textfield" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>
